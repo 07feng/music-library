@@ -10,7 +10,7 @@
 import { defineComponent,getCurrentInstance } from 'vue'
 export default defineComponent({
     props: {
-        styleList: Array<any>,
+        styleList: Array,
         activeName: String
     },
     setup() {

@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import YinIcon from '@/components/YinIcon.vue'
+import YinIcon from '@/components/layouts/YinIcon.vue'
 import { Icon } from '@/enums'
 
 export default defineComponent({
@@ -23,8 +23,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import url('../../assets/css/global.scss');
-@import url('../../assets/css/var.scss');
+@import '@/assets/css/global.scss';
+@import '@/assets/css/var.scss';
 
 .login-logo {
     background-color: $color-blue-light;

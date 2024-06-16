@@ -1,4 +1,11 @@
 import { getBaseURL, get, post, deletes, put } from './request'
+interface ResponseBody {
+  code: string
+  success: boolean
+  message: string
+  type: string
+  data?: any
+}
 
 const HttpManager = {
   //获取图片信息
@@ -7,7 +14,7 @@ const HttpManager = {
       ? `${getBaseURL()}/${url}`
       : 'https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png',
   //登录
-  signIn: (username, password) => post('/user/login/status', { username, password }),
+  signIn: ({ username, password }) => post('/user/login/status', { username, password }),
   //邮箱登录
   signInByEmail: (email, password) => post('/user/email/status', { email, password }),
   //注册
@@ -31,5 +38,13 @@ const HttpManager = {
   updateUserPwd: ({ id, username, oldPassword, password }) =>
     put('/user/updatePwd', { id, username, oldPassword, password }),
   //获取用户信息
-  getUserMsg: (id) => get(`user/detail?${id}`)
+  getUserMsg: (id) => get(`user/detail?${id}`),
+  //获取海报列表
+  getBannerList: () => get('/banner/getAllBanner'),
+  //获取歌单
+  getSongList: () => get('songList'),
+  //获取歌手列表
+  getAllSinger: () => get('singerList')
 }
+
+export { HttpManager, ResponseBody }
