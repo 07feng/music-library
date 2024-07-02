@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="65adcd78-4503-42b3-830d-1838de77f3b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/music-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-common/src/main/java/com/feng/music/builder/QueryWrapperBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-common/src/main/java/com/feng/music/dto/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/MusicServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/controller/BannerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/controller/SingerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/controller/SongController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/dto/banner/BannerResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/dto/singer/SingerResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/dto/song/SongResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/mapper/BannerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/mapper/SingerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/mapper/SongMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/po/Banner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/po/BasePo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/po/Singer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/po/Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/service/BannerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/service/BaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/service/SingerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/service/SongService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/service/impl/BannerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/service/impl/BaseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/service/impl/SingerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/java/com/feng/music/music/server/service/impl/SongServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/main/resources/db/migration/V1_0_0__init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music-server/src/test/java/com/feng/music/music/server/MusicServerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../music-client/env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../music-client/env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../music-client/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../music-client/src/api/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../music-client/src/api/request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../music-client/src/api/request.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../music-client/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../music-client/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../music-client/vite.config.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="music" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="music" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\MavenLocalReposity" />
+        <option name="mavenHome" value="D:/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="17" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+    <option name="disabledProfiles">
+      <list>
+        <option value="jdk1.8" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="17" />
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2iEIeh6UHX6tTiup0SDVvPTt4PP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.music-parent [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.music-parent [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.music-parent [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MusicServerApplication.executor&quot;: &quot;JRebel Debug&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/companyProject/rad/rad-parent&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.feng.music.music.server.service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="MusicServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="music-server" />
+      <option name="SHORTEN_COMMAND_LINE" value="MANIFEST" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.feng.music.music.server.MusicServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="65adcd78-4503-42b3-830d-1838de77f3b6" name="Default Changelist" comment="" />
+      <created>1719049406405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719049406405</updated>
+      <workItem from="1719049410747" duration="10482000" />
+      <workItem from="1719064326744" duration="903000" />
+      <workItem from="1719065253602" duration="1444000" />
+      <workItem from="1719074718182" duration="397000" />
+      <workItem from="1719075772653" duration="186000" />
+      <workItem from="1719075967530" duration="349000" />
+      <workItem from="1719136058170" duration="147000" />
+      <workItem from="1719136216075" duration="321000" />
+      <workItem from="1719136550110" duration="1147000" />
+      <workItem from="1719139052961" duration="209000" />
+      <workItem from="1719139293015" duration="2194000" />
+      <workItem from="1719141520802" duration="257000" />
+      <workItem from="1719141789893" duration="1564000" />
+      <workItem from="1719145195998" duration="75000" />
+      <workItem from="1719145285623" duration="904000" />
+      <workItem from="1719150794006" duration="2267000" />
+      <workItem from="1719640595008" duration="822000" />
+      <workItem from="1719641428988" duration="86000" />
+      <workItem from="1719641525560" duration="94000" />
+      <workItem from="1719641630599" duration="44000" />
+      <workItem from="1719641684753" duration="14645000" />
+      <workItem from="1719659682877" duration="3845000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
