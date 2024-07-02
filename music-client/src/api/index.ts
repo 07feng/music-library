@@ -40,11 +40,11 @@ const HttpManager = {
   //获取用户信息
   getUserMsg: (id) => get(`user/detail?${id}`),
   //获取海报列表
-  getBannerList: () => get('/banner/getAllBanner'),
+  getBannerList: () => get('/banner/list/all'),
   //获取歌单
-  getSongList: () => get('songList'),
+  getSongList: () => get('/song/list/all'),
   //获取歌手列表
-  getAllSinger: () => get('singerList')
+  getAllSinger: () => get('/singer/list/all')
 }
 
 export { HttpManager, ResponseBody }

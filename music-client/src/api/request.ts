@@ -1,7 +1,7 @@
 import axios from 'axios'
 import router from '@/router'
 
-const BASE_URL = process.env.NODE_HOST
+const BASE_URL = 'http://localhost:9001'
 
 axios.defaults.timeout = 5000 //超时时间设置
 axios.defaults.withCredentials = true //允许跨域

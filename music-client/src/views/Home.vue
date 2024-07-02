@@ -56,3 +56,27 @@ try {
   console.error(error)
 }
 </script>
+
+
+<style lang="scss" scoped>
+@import "@/assets/css/var.scss";
+
+/*轮播图*/
+.swiper-container {
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  img {
+    width: 100%;
+  }
+}
+
+.swiper-container:deep(.el-carousel__indicators.el-carousel__indicators--outside) {
+  display: inline-block;
+  transform: translateX(30vw);
+}
+
+.el-slider__runway {
+  background-color: $color-blue;
+}
+</style>
