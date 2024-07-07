@@ -14,8 +14,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>music-server</module>
-        <module>music-common</module>
+        <module>music</module>
+        <module>common</module>
+        <module>basic</module>
     </modules>
 
     <properties>
