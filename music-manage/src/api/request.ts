@@ -1,7 +1,7 @@
 import axios from 'axios'
 import router from '../router'
 
-const BASE_URL = import.meta.env.BASE_URL
+const BASE_URL = import.meta.env.VITE_BASIC_API_URL
 
 axios.defaults.timeout = 5000 // 超时时间设置
 axios.defaults.withCredentials = true // true允许跨域

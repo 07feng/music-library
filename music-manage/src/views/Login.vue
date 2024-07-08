@@ -69,7 +69,7 @@ export default defineComponent({
 
 <style scoped>
 .login-container {
-  /* position: relative; */
+  position: relative;
   background: url('../assets/images/background.jpg');
   background-attachment: fixed;
   background-position: center;
