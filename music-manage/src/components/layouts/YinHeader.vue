@@ -35,7 +35,7 @@ import { RouterName } from '@/enums/router-name'
 import mixin from '@/mixins/mixin'
 import emitter from '@/utils/emitter'
 import { Expand, Fold } from '@element-plus/icons-vue'
-import { defineComponent, ref } from 'vue'
+import { computed, defineComponent, ref } from 'vue'
 import { useStore } from 'vuex/types/index.js'
 
 export default defineComponent({
@@ -43,31 +43,32 @@ export default defineComponent({
     Expand,
     Fold
   },
-  setup(props, ctx) {
-    const store = useStore(),
+  setup() {
+    const store = useStore()
     const collapse = ref(true)
     const { routerManager } = mixin()
     const musicName = ref(MUSICNAME)
-    const username = ref("admin")
-    const userPic = computed(()=> store.getters.userPic)
+    const username = ref('admin')
+    const userPic = computed(() => store.getters.userPic)
 
     function collapseChage() {
       collapse.value = !collapse.value
       emitter.emit('collapse', collapse.value)
     }
 
-    function handleCommand(command) {
+    function handleCommand(command?: any) {
       if (command == 'loginOut') {
         routerManager(RouterName.SignIn, { path: RouterName.SignIn })
       }
     }
 
     return {
+      userPic,
       musicName,
       username,
       collapse,
       collapseChage,
-      handleCommand,
+      handleCommand
     }
   }
 })
