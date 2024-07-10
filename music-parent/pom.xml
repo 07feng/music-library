@@ -17,6 +17,7 @@
         <module>music</module>
         <module>common</module>
         <module>basic</module>
+        <module>operating</module>
     </modules>
 
     <properties>

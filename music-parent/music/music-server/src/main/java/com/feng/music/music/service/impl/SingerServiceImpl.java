@@ -10,6 +10,7 @@
  */
 package com.feng.music.music.service.impl;
 
+import com.feng.music.common.service.impl.BaseServiceImpl;
 import com.feng.music.music.dto.singer.SingerResp;
 import com.feng.music.music.mapper.SingerMapper;
 import com.feng.music.music.po.Singer;

@@ -11,6 +11,7 @@
 package com.feng.music.music.po;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.feng.music.common.po.BasePo;
 import com.feng.music.music.dto.song.SongResp;
 import lombok.Getter;
 import lombok.Setter;
@@ -58,14 +59,6 @@ public class Song extends BasePo {
      * 歌曲源文件路径
      */
     private String url;
-    /**
-     * 创建时间
-     */
-    private LocalDateTime createTime;
-    /**
-     * 更新时间
-     */
-    private LocalDateTime updateTime;
 
     public static SongResp convertToSongResp(Song song) {
         SongResp songResp = new SongResp();

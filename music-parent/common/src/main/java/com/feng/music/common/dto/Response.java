@@ -8,7 +8,7 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.feng.music.dto;
+package com.feng.music.common.dto;
 
 import lombok.Getter;
 import lombok.Setter;

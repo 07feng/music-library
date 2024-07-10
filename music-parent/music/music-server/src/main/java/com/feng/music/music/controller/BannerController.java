@@ -10,7 +10,7 @@
  */
 package com.feng.music.music.controller;
 
-import com.feng.music.dto.Response;
+import com.feng.music.common.dto.Response;
 import com.feng.music.music.dto.banner.BannerResp;
 import com.feng.music.music.service.BannerService;
 import org.springframework.beans.factory.annotation.Autowired;

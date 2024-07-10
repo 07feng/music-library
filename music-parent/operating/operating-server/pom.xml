@@ -4,13 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.feng.music</groupId>
-        <artifactId>basic</artifactId>
+        <artifactId>operating</artifactId>
         <version>1.0</version>
     </parent>
     <groupId>com.feng.music</groupId>
-    <artifactId>basic-server</artifactId>
-    <version>11.0</version>
-    <name>basic-server</name>
+    <artifactId>operating-server</artifactId>
+    <version>1.0</version>
+    <name>operating-server</name>
+    <description>operating-server</description>
 
     <properties>
         <java.version>17</java.version>
@@ -68,6 +69,10 @@
         <dependency>
             <groupId>com.feng.music</groupId>
             <artifactId>common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.feng.music</groupId>
+            <artifactId>operating-client</artifactId>
         </dependency>
 
         <dependency>

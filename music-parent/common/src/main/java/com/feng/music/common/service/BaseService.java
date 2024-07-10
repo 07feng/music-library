@@ -1,7 +1,7 @@
-package com.feng.music.music.service;
+package com.feng.music.common.service;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.feng.music.music.po.BasePo;
+import com.feng.music.common.po.BasePo;
 
 import java.util.List;
 

@@ -11,6 +11,7 @@
 package com.feng.music.music.po;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.feng.music.common.po.BasePo;
 import com.feng.music.music.dto.singer.SingerResp;
 import lombok.Getter;
 import lombok.Setter;

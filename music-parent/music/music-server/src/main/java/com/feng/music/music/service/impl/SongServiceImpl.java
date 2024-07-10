@@ -11,6 +11,7 @@
 package com.feng.music.music.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.feng.music.common.service.impl.BaseServiceImpl;
 import com.feng.music.music.dto.song.SongResp;
 import com.feng.music.music.mapper.SongMapper;
 import com.feng.music.music.po.Song;

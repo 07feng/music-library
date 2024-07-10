@@ -11,6 +11,7 @@
 package com.feng.music.music.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.feng.music.common.service.impl.BaseServiceImpl;
 import com.feng.music.music.mapper.BannerMapper;
 import com.feng.music.music.po.Banner;
 import com.feng.music.music.dto.banner.BannerResp;

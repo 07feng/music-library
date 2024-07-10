@@ -8,15 +8,14 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.feng.music.music.po;
+package com.feng.music.common.po;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * 〈一句话功能简述〉<br> 
@@ -28,12 +27,26 @@ import java.io.Serializable;
  */
 @Getter
 @Setter
-public class BasePo implements Serializable {
+public class BasePo extends BaseIdPo implements Serializable {
 
     @Serial
     private static final long serialVersionUID = -1735620185593787026L;
 
-    @TableId(type = IdType.ASSIGN_ID)
-    private Long id;
+    /**
+     * 创建人
+     */
+    private Long creator;
+    /**
+     * 创建时间
+     */
+    private LocalDateTime createTime;
+    /**
+     * 更新人
+     */
+    private Long updater;
+    /**
+     * 更新时间
+     */
+    private LocalDateTime updateTime;
 }
 

@@ -8,15 +8,15 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.feng.music.music.service.impl;
+package com.feng.music.common.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.feng.music.builder.QueryWrapperBuilder;
-import com.feng.music.music.po.BasePo;
-import com.feng.music.music.service.BaseService;
+import com.feng.music.common.builder.QueryWrapperBuilder;
+import com.feng.music.common.po.BasePo;
+import com.feng.music.common.service.BaseService;
 import org.apache.ibatis.session.ResultHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -32,7 +32,7 @@ import java.util.Map;
  * @author Lynn
  * @create 2024/6/29
  */
-public class BaseServiceImpl<T extends BasePo, ID extends Serializable, M extends BaseMapper<T>> implements BaseService<T> {
+public abstract class BaseServiceImpl<T extends BasePo, ID extends Serializable, M extends BaseMapper<T>> implements BaseService<T> {
 
     @Autowired
     private M mapper;

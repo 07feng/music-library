@@ -1,5 +1,6 @@
 package com.feng.music.music.service;
 
+import com.feng.music.common.service.BaseService;
 import com.feng.music.music.dto.song.SongResp;
 import com.feng.music.music.po.Song;
 
