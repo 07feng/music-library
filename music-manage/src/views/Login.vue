@@ -3,14 +3,14 @@
     <div class="title">{{ musicName }}</div>
     <div class="login">
       <el-form :model="ruleForm" :rules="rules">
-        <el-form-item prop="username">
-          <el-input v-model="ruleForm.username" placeholder="username"></el-input>
+        <el-form-item prop="userName">
+          <el-input v-model="ruleForm.userName" placeholder="请输入用户名"></el-input>
         </el-form-item>
         <el-form-item prop="password">
           <el-input
             type="password"
             v-model="ruleForm.password"
-            placeholder="password"
+            placeholder="请输入密码"
             @keyup.enter="submitForm"
           ></el-input>
         </el-form-item>
@@ -32,12 +32,12 @@ import { getCurrentInstance, reactive, ref, defineComponent } from 'vue'
 
 export default defineComponent({
   setup() {
-    const proxy: any = getCurrentInstance()
+    const { proxy } = getCurrentInstance()
     const { routerManager } = mixin()
     const musicName = ref(MUSICNAME)
     const ruleForm = reactive({
-      username: 'admin',
-      password: '123'
+      userName: '',
+      password: ''
     })
     const rules = reactive({
       username: [{ require: true, message: '请输入用户名', trigger: 'blur' }],
@@ -45,15 +45,20 @@ export default defineComponent({
     })
 
     async function submitForm() {
-      let username = ruleForm.username
+      let userName = ruleForm.userName
       let password = ruleForm.password
-      const result = (await HttpManager.getLoginStatus({ username, password })) as ResponseBody
-      proxy.$message({
-        message: result.message,
-        type: result.type
-      })
-      if (result.success) {
+      const result = (await HttpManager.login({ userName, password })) as ResponseBody
+      if (result.code == '200') {
+        proxy.$message({
+          message: result.message,
+          type: 'sucess'
+        })
         routerManager(RouterName.Info, { path: RouterName.Info })
+      } else {
+        proxy.$message({
+          message: result.message,
+          type: 'warning'
+        })
       }
     }
 

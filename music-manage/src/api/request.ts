@@ -1,16 +1,22 @@
 import axios from 'axios'
 import router from '../router'
 
-const BASE_URL = import.meta.env.VITE_BASIC_API_URL
+const OPERATING_API_URL = import.meta.env.VITE_OPERATING_API_URL
 
 axios.defaults.timeout = 5000 // 超时时间设置
 axios.defaults.withCredentials = true // true允许跨域
-axios.defaults.baseURL = BASE_URL
+axios.defaults.baseURL = OPERATING_API_URL
 // Content-Type 响应头
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
+axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
+
+const operatingService = axios.create({
+  baseURL: '/operating',
+  withCredentials: true,
+  timeout: 5000
+})
 
 // 响应拦截器
-axios.interceptors.response.use(
+operatingService.interceptors.response.use(
   (response) => {
     // 如果返回的状态码为200，说明接口请求成功，可以正常拿到数据
     // 否则的话抛出错误
@@ -57,7 +63,7 @@ axios.interceptors.response.use(
 )
 
 export function getBaseURL() {
-  return BASE_URL
+  return OPERATING_API_URL
 }
 
 /**
@@ -68,7 +74,7 @@ export function getBaseURL() {
  */
 export function get(url?: any, params?: object) {
   return new Promise((resolve, reject) => {
-    axios.get(url, params).then(
+    operatingService.get(url, params).then(
       (response) => resolve(response.data),
       (error) => reject(error)
     )
@@ -83,7 +89,7 @@ export function get(url?: any, params?: object) {
  */
 export function post(url?: any, data = {}) {
   return new Promise((resolve, reject) => {
-    axios.post(url, data).then(
+    operatingService.post(url, data).then(
       (response) => resolve(response.data),
       (error) => reject(error)
     )
@@ -98,7 +104,7 @@ export function post(url?: any, data = {}) {
  */
 export function deletes(url?: any, data = {}) {
   return new Promise((resolve, reject) => {
-    axios.delete(url, data).then(
+    operatingService.delete(url, data).then(
       (response) => resolve(response.data),
       (error) => reject(error)
     )
@@ -113,7 +119,7 @@ export function deletes(url?: any, data = {}) {
  */
 export function put(url, data = {}) {
   return new Promise((resolve, reject) => {
-    axios.put(url, data).then(
+    operatingService.put(url, data).then(
       (response) => resolve(response.data),
       (error) => reject(error)
     )

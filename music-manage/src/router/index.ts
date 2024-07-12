@@ -1,3 +1,4 @@
+import { title } from 'process'
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 
@@ -5,6 +6,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/Home',
     component: () => import('@/views/Home.vue'),
+    meta: { title: '自述文件' },
     children: [
       {
         path: '/Info',

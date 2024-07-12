@@ -1,5 +1,5 @@
 export const enum RouterName {
-  Home = '/home',
-  Info = 'info',
-  SignIn = '/signIn'
+  Home = '/Home',
+  Info = '/Info',
+  Login = '/'
 }
