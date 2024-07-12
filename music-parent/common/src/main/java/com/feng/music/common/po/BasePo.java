@@ -12,6 +12,7 @@ package com.feng.music.common.po;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.experimental.Accessors;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -27,7 +28,8 @@ import java.time.LocalDateTime;
  */
 @Getter
 @Setter
-public class BasePo extends BaseIdPo implements Serializable {
+@Accessors(chain = true)
+public class BasePo extends BaseIdPo {
 
     @Serial
     private static final long serialVersionUID = -1735620185593787026L;

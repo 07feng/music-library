@@ -20,7 +20,7 @@ public interface BaseService<T extends BasePo> extends BaseMapper<T> {
      * @param entity
      * @return
      */
-    T selectOne(T entity) throws IllegalAccessException;
+    T selectOne(T entity) ;
 
     /**
      * 查询全部

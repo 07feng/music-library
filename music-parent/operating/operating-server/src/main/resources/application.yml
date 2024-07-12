@@ -1,8 +1,10 @@
 server:
   port: 9003
+  servlet:
+    context-path: /operating
 spring:
   application:
-    name: music-server
+    name: operating-server
   cloud:
     nacos:
       config:

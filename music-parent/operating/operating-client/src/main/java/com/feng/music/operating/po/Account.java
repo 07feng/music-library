@@ -2,8 +2,11 @@ package com.feng.music.operating.po;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.feng.music.common.po.BasePo;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.Accessors;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -16,19 +19,18 @@ import java.io.Serializable;
  */
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Accessors(chain = true)
 @TableName("account")
-public class Account extends BasePo implements Serializable {
+public class Account extends BasePo {
     @Serial
     private static final long serialVersionUID = 5416532551712644085L;
 
     /**
      * 账户名称
      */
-    private String accountName;
-    /**
-     * 手机号
-     */
-    private String mobile;
+    private String userName;
     /**
      * 密码
      */

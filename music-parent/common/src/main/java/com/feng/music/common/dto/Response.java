@@ -10,6 +10,7 @@
  */
 package com.feng.music.common.dto;
 
+import com.feng.music.common.exception.ErrorMessage;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,15 +31,29 @@ public class Response<T> implements Serializable {
     @Serial
     private static final long serialVersionUID = -4432451298302139017L;
 
-    private Integer code;
+    private String code;
     private String message;
     private T data;
 
     public static <T> Response<T> success(T data) {
         Response<T> response = new Response<>();
-        response.setCode(200);
+        response.setCode("200");
         response.setMessage("成功");
         response.setData(data);
+        return response;
+    }
+
+    public static <T> Response<T> success() {
+        Response<T> response = new Response<>();
+        response.setCode("200");
+        response.setMessage("成功");
+        return response;
+    }
+
+    public static <T> Response<T> error(ErrorMessage errorMessage) {
+        Response<T> response = new Response<>();
+        response.setCode(errorMessage.getErrorCode());
+        response.setMessage(errorMessage.getErrorMessage());
         return response;
     }
 }

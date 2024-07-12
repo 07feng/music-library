@@ -38,9 +38,14 @@ public abstract class BaseServiceImpl<T extends BasePo, ID extends Serializable,
     private M mapper;
 
     @Override
-    public T selectOne(T entity) throws IllegalAccessException {
+    public T selectOne(T entity) {
         QueryWrapperBuilder<T> queryWrapperBuilder = new QueryWrapperBuilder<>();
-        QueryWrapper<T> queryWrapper = queryWrapperBuilder.build(entity);
+        QueryWrapper<T> queryWrapper = null;
+        try {
+            queryWrapper = queryWrapperBuilder.build(entity);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
         return mapper.selectOne(queryWrapper, true);
     }
 

@@ -28,9 +28,14 @@ public class QueryWrapperBuilder<T> {
         QueryWrapper<T> queryWrapper = new QueryWrapper<>();
         Field[] fields = entity.getClass().getDeclaredFields();
         for (Field field : fields) {
+            if ("serialVersionUID".equals(field.getName())) {
+                continue;
+            }
+            field.setAccessible(true);
             Object value = field.get(entity);
             if (Objects.nonNull(value)) {
-                queryWrapper.eq(getColumnName(field.getName()), value);
+                String columnName = getColumnName(field.getName());
+                queryWrapper.eq(columnName, value);
             }
         }
         return queryWrapper;
@@ -38,8 +43,6 @@ public class QueryWrapperBuilder<T> {
 
     private static String getColumnName(String name) {
         StringBuffer sb = new StringBuffer();
-        //去掉get前缀
-        name = name.substring(3);
         char[] chars = name.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             char item = chars[i];
@@ -51,7 +54,7 @@ public class QueryWrapperBuilder<T> {
                 sb.append(item);
             }
         }
-        return sb.deleteCharAt(0).toString();
+        return sb.toString();
     }
 }
 
