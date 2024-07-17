@@ -31,10 +31,6 @@ import java.nio.charset.StandardCharsets;
 @RestControllerAdvice
 public class WebExceptionHandler {
 
-    static {
-        System.out.println("111111");
-    }
-
     @ModelAttribute
     public void setResponse(HttpServletResponse response) {
         response.setCharacterEncoding(StandardCharsets.UTF_8.name());

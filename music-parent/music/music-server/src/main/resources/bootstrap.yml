@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: e883000d-940b-49f5-a001-7a745d69b70b
+        group: music
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: e883000d-940b-49f5-a001-7a745d69b70b
+        group: music
+        file-extension: yaml
+        refresh-enabled: true
+    

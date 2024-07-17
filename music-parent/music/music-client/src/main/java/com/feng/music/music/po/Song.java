@@ -48,6 +48,10 @@ public class Song extends BasePo {
      */
     private String introduction;
     /**
+     * 发行时间
+     */
+    private LocalDateTime issueTime;
+    /**
      * 照片
      */
     private String pic;
