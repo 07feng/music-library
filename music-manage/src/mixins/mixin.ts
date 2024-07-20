@@ -1,4 +1,5 @@
 import { RouterName } from '@/enums/router-name'
+import { SingerSex } from '@/enums/singer-sex'
 import { getCurrentInstance, ref } from 'vue'
 import type { LocationQueryRaw } from 'vue-router'
 
@@ -19,5 +20,20 @@ export default function () {
     }
   }
 
-  return { routerManager }
+  function changeSex(value) {
+    switch (value) {
+      case SingerSex.MAIL:
+        return '男'
+      case SingerSex.FEMAIL:
+        return '女'
+      case SingerSex.GROUP:
+        return '音乐组合'
+      case SingerSex.VARIOUS:
+        return '群星'
+      case SingerSex.UNKNOWN:
+        return '未知'
+    }
+  }
+
+  return { changeSex, routerManager }
 }

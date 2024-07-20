@@ -1,30 +1,27 @@
 <template>
   <div class="header">
     <div class="collapse-btn" @click="collapseChage()">
-      <el-icon v-if="!collapse">
-        <expand />
-        <fold />
-      </el-icon>
-      <el-icon v-else></el-icon>
+      <el-icon v-if="!collapse"><expand /></el-icon>
+      <el-icon v-else><fold /></el-icon>
     </div>
-  </div>
-  <div class="logo">{{ musicName }}</div>
-  <div class="header-right">
-    <div class="header-user-con">
-      <div class="user-avator">
-        <img src="/src/assets/images/user.jpg" />
+    <div class="logo">{{ musicName }}</div>
+    <div class="header-right">
+      <div class="header-user-con">
+        <div class="user-avator">
+          <img src="/src/assets/images/user.jpg" />
+        </div>
+        <el-dropdown class="user-name" trigger="click" @command="handleCommand">
+          <span class="el-dropdown-link">
+            {{ username }}
+            <i class="el-icon-caret-bottom"></i>
+          </span>
+          <template #dropdown>
+            <el-dropdown-menu>
+              <el-dropdown-item command="loginOut">退出登录</el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+        </el-dropdown>
       </div>
-      <el-dropdown class="user-name" trigger="click" @command="handleCommand">
-        <span class="el-dropdown-link">
-          {{ username }}
-          <i class="el-icon-caret-bottom"></i>
-        </span>
-        <template #dropdown>
-          <el-dropdown-menu>
-            <el-dropdown-item command="loginOut">退出登录</el-dropdown-item>
-          </el-dropdown-menu>
-        </template>
-      </el-dropdown>
     </div>
   </div>
 </template>

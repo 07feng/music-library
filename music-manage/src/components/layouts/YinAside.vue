@@ -12,7 +12,7 @@
         <el-icon><pie-chart /></el-icon>
         <span>系统首页</span>
       </el-menu-item>
-      <el-menu-item index="consumer">
+      <el-menu-item index="user">
         <el-icon>
           <user />
         </el-icon>

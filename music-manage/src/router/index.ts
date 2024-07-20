@@ -1,4 +1,3 @@
-import { title } from 'process'
 import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 
@@ -11,6 +10,10 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/Info',
         component: () => import('@/views/InfoPage.vue')
+      },
+      {
+        path: '/User',
+        component: () => import('@/views/UserManage.vue')
       }
     ]
   },
