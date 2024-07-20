@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.feng.music.basic.mapper.UserMapper">
+
+    <select id="selectUserList" resultType="com.feng.music.basic.po.User">
+        select * from user
+        <where>
+            <if test="queryReq.searchKey != null and queryReq.searchKey != ''">
+                user_name like '%${queryReq.searchKey}%'
+                or email like '%${queryReq.searchKey}%'
+                or phone_num like '%${queryReq.searchKey}%'
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -1,7 +1,7 @@
 package com.feng.music.common.service;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.feng.music.common.po.BasePo;
+import com.feng.music.common.po.BaseIdPo;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import java.util.List;
  * @author Lynn
  * @create 2024/6/29
  */
-public interface BaseService<T extends BasePo> extends BaseMapper<T> {
+public interface BaseService<T extends BaseIdPo> extends BaseMapper<T> {
 
     /**
      * 查询单个

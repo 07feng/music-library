@@ -11,7 +11,7 @@
 package com.feng.music.music.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.feng.music.common.service.impl.BaseServiceImpl;
+import com.feng.music.common.service.impl.AbstractBaseService;
 import com.feng.music.music.dto.song.SongResp;
 import com.feng.music.music.mapper.SongMapper;
 import com.feng.music.music.po.Song;
@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
  * @create 2024/6/29
  */
 @Service
-public class SongServiceImpl extends BaseServiceImpl<Song, Long, SongMapper> implements SongService {
+public class SongServiceImpl extends AbstractBaseService<Song, Long, SongMapper> implements SongService {
 
     @Override
     public List<SongResp> getAllSong() {

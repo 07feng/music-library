@@ -11,10 +11,10 @@
 package com.feng.music.music.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.feng.music.common.service.impl.BaseServiceImpl;
+import com.feng.music.common.service.impl.AbstractBaseService;
+import com.feng.music.music.dto.banner.BannerResp;
 import com.feng.music.music.mapper.BannerMapper;
 import com.feng.music.music.po.Banner;
-import com.feng.music.music.dto.banner.BannerResp;
 import com.feng.music.music.service.BannerService;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
  * @create 2024/6/29
  */
 @Service
-public class BannerServiceImpl extends BaseServiceImpl<Banner, Long, BannerMapper> implements BannerService {
+public class BannerServiceImpl extends AbstractBaseService<Banner, Long, BannerMapper> implements BannerService {
 
     @Override
     public List<BannerResp> getAllBanner() {

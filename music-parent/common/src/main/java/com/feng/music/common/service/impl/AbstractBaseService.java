@@ -15,8 +15,9 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.feng.music.common.builder.QueryWrapperBuilder;
-import com.feng.music.common.po.BasePo;
+import com.feng.music.common.po.BaseIdPo;
 import com.feng.music.common.service.BaseService;
+import lombok.Getter;
 import org.apache.ibatis.session.ResultHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -32,7 +33,8 @@ import java.util.Map;
  * @author Lynn
  * @create 2024/6/29
  */
-public abstract class BaseServiceImpl<T extends BasePo, ID extends Serializable, M extends BaseMapper<T>> implements BaseService<T> {
+@Getter
+public abstract class AbstractBaseService<T extends BaseIdPo, ID extends Serializable, M extends BaseMapper<T>> implements BaseService<T> {
 
     @Autowired
     private M mapper;

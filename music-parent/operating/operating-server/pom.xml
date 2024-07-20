@@ -53,6 +53,10 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.flywaydb</groupId>
@@ -77,6 +81,10 @@
         <dependency>
             <groupId>com.feng.music</groupId>
             <artifactId>operating-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.feng.music</groupId>
+            <artifactId>basic-client</artifactId>
         </dependency>
 
         <dependency>

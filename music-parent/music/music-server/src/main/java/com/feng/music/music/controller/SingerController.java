@@ -10,6 +10,7 @@
  */
 package com.feng.music.music.controller;
 
+import com.feng.music.common.dto.EchartsViewResp;
 import com.feng.music.common.dto.Response;
 import com.feng.music.music.dto.singer.SingerResp;
 import com.feng.music.music.service.SingerService;
@@ -37,6 +38,16 @@ public class SingerController {
     @GetMapping("/list/all")
     public Response<List<SingerResp>> getAllSinger() {
         return Response.success(singerService.getAllSinger());
+    }
+
+    @GetMapping("/echarts/sex_radio")
+    public Response<EchartsViewResp> getSingerSexRadio() {
+        return Response.success(singerService.getSingerSexRadio());
+    }
+
+    @GetMapping("/echarts/country/statistics")
+    public Response<EchartsViewResp> getSingerCountryStatistics() {
+        return Response.success(singerService.getSingerCountryStatistics());
     }
 }
 

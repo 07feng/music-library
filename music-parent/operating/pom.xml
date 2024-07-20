@@ -31,6 +31,11 @@
 			</dependency>
 			<dependency>
 				<groupId>com.feng.music</groupId>
+				<artifactId>basic-client</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.feng.music</groupId>
 				<artifactId>common</artifactId>
 				<version>1.0</version>
 			</dependency>

@@ -8,7 +8,6 @@ import java.io.Serial;
 import java.io.Serializable;
 
 /**
- * 版权：深圳航天信息有限公司
  *
  * @author linqf
  * @description
