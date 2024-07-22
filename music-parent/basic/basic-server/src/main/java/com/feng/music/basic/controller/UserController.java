@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @author linqf
  * @description
@@ -27,5 +29,17 @@ public class UserController {
                                              @RequestParam(defaultValue = "20") Integer pageSize,
                                              @RequestBody UserQueryReq userQueryReq) {
         return Response.success(userService.page(pageNum, pageSize, userQueryReq));
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public Response<Void> deleteById(@PathVariable Long id) {
+        userService.deleteById(id);
+        return Response.success();
+    }
+
+    @DeleteMapping("/delete/batch")
+    public Response<Void> batchDelete(@RequestBody List<Long> idList) {
+        userService.deleteByIds(idList);
+        return Response.success();
     }
 }

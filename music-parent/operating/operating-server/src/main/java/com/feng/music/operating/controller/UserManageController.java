@@ -8,6 +8,8 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @author linqf
  * @description
@@ -25,5 +27,15 @@ public class UserManageController {
                                              @RequestParam(defaultValue = "20") Integer pageSize,
                                              @RequestBody UserQueryReq queryReq) {
         return userFeignService.page(pageNum, pageSize, queryReq);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public Response<Void> deleteById(@PathVariable Long id) {
+        return userFeignService.deleteById(id);
+    }
+
+    @DeleteMapping("/delete/batch")
+    public Response<Void> batchDelete(@RequestBody List<Long> idList) {
+        return userFeignService.batchDelete(idList);
     }
 }

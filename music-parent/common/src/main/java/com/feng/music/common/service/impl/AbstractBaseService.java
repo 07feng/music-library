@@ -67,6 +67,11 @@ public abstract class AbstractBaseService<T extends BaseIdPo, ID extends Seriali
     }
 
     @Override
+    public int deleteById(Serializable id) {
+        return mapper.deleteById(id);
+    }
+
+    @Override
     public int delete(Wrapper<T> queryWrapper) {
         return mapper.delete(queryWrapper);
     }
