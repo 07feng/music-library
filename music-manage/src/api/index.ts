@@ -1,4 +1,4 @@
-import { get, post } from './request'
+import { deletes, get, post } from './request'
 
 interface ResponseBody {
   code: string
@@ -15,7 +15,11 @@ const HttpManager = {
   singerCountryStatistics: () => get(`/music/singer/echarts/country/statistics`),
   //用户分页列表
   getUserPageList: (pageNum, pageSize, { searchKey }) =>
-    post(`/operating/user_manage/page?pageNum=${pageNum}&pageSize=${pageSize}`, { searchKey })
+    post(`/operating/user_manage/page?pageNum=${pageNum}&pageSize=${pageSize}`, { searchKey }),
+  //删除单个用户
+  deleteUserById: (id) => deletes(`/operating/user_manage/delete/${id}`),
+  //批量删除用户
+  batchDeleteUser: (list) => deletes(`/operating/user_manage/delete/batch`, list)
 }
 
 export { type ResponseBody, HttpManager }
